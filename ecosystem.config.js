@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'dwh-server-reader',
+      name: 'backend-backoffice',
       script: './server.js',
       wait_ready: true,
       listen_timeout: 3000,
