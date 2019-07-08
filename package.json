@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "postinstall": "link-module-alias",
-    "prestart": "link-module-alias && npm run sequelize:migrate",
+    "prestart": "link-module-alias",
     "start": "pm2 start ecosystem.config.js",
     "poststart": "pm2 logs",
     "precommit": "npm run lint:js && npm run test",
