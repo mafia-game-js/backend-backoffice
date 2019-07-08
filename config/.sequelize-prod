@@ -1,0 +1,7 @@
+const path = require('path');
+
+module.exports = {
+    "config": path.resolve('./config', 'relational-database.js'),
+    "models-path": path.resolve('./core-modules/be-core-modules/data-bases/relationalDataBase/models/prod'),
+    "migrations-path": path.resolve('./core-modules/be-core-modules/data-bases/relationalDataBase/migrations/prod')
+ };
