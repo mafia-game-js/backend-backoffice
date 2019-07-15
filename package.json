@@ -8,7 +8,7 @@
     "prestart": "link-module-alias",
     "start": "pm2 start ecosystem.config.js",
     "poststart": "pm2 logs",
-    "precommit": "npm run lint:js && npm run test",
+    "precommit": "npm run lint:js",
     "lint:js": "eslint --ignore-path .gitignore \"**/*.js\" --fix",
     "test": "NODE_PATH=./ NODE_ENV=test jest --runInBand --collectCoverage --detectOpenHandles --notify --forceExit",
     "sequelize:migrate": "node -r dotenv/config ./config/prod-migration.js",
