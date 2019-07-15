@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 require('dotenv').config()
 const express = require('express')
-const routes = require('./routes')
+const routesback = require('.backend/routes')
+const routesproduct = require('.product/routes')
 const parser = require('body-parser')
 const cors = require('cors')
 const logger = require('morgan')
@@ -13,7 +14,8 @@ class App {
     this.dbDrivers = {}
     this.config()
     this.logs()
-    this.routes()
+    this.routesback()
+    this.routesproduct()    
     this.initServer()
   }
 
@@ -37,7 +39,8 @@ class App {
       req.sequelize = relationalDataBase.db.prod.sequelize
       next()
     })
-    this.app.use('/admin', routes)
+    this.app.use('/admin', routesback)
+    this.app.use('/product', routesproduct)
   }
 
   async initServer() {
