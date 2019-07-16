@@ -1,12 +1,11 @@
 const express = require('express')
-const controllers = require('#ctrl')
-
+const controllers = require('#productCtrl')
 const router = express.Router()
 
 router
   .get(
     '/helloword',
-    controllers.helloword
+    controllers.helloworld
   )
 
 module.exports = router

@@ -1,4 +1,4 @@
-const images = require('../helpers/images.js')
+const images = require('#helpers/images.js')
 
 class Files {
   uploadPhoto (req, res) {

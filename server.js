@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 require('dotenv').config()
 const express = require('express')
-const routesback = require('./backend/routes')
-const routesproduct = require('./product/routes')
+const routesback = require('#backRoutes')
+const routesproduct = require('#productRoutes')
 const parser = require('body-parser')
 const cors = require('cors')
 const logger = require('morgan')
