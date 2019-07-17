@@ -4,8 +4,8 @@ const router = express.Router()
 
 router
   .get(
-    '/helloword',
-    controllers.helloworld
+    '/helloworld',
+    controllers.helloworld.helloworld
   )
 
 module.exports = router

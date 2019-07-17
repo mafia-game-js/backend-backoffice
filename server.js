@@ -14,8 +14,7 @@ class App {
     this.dbDrivers = {}
     this.config()
     this.logs()
-    this.routesback()
-    this.routesproduct()    
+    this.routes()  
     this.initServer()
   }
 

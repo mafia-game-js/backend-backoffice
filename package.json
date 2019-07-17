@@ -4,6 +4,7 @@
   "description": "This is going to be the service to retrieve data from all the different sources we are going to have.",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon node server.js",
     "postinstall": "link-module-alias",
     "prestart": "link-module-alias",
     "start": "pm2 start ecosystem.config.js",
@@ -52,6 +53,7 @@
     "link-module-alias": "^1.2.0",
     "morgan": "^1.9.1",
     "mysql2": "^1.6.5",
+    "nodemon": "^1.19.1",
     "pg": "^7.11.0",
     "pg-hstore": "^2.3.3",
     "pm2": "^3.5.1",
@@ -63,7 +65,7 @@
     "#core": "core-modules",
     "#backCtrl": "backend/controllers",
     "#productCtrl": "product/controllers",
-    "#backRoutes": "backend/routes",    
+    "#backRoutes": "backend/routes",
     "#productRoutes": "product/routes",
     "#helpers": "helpers"
   }
