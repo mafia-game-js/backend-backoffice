@@ -109,8 +109,14 @@ class Question {
         ]
       })
       .then(questions => {
+        //console.log('My questions are: ')
+        //console.log(questions)
         res.json(questions)
-      })
+        })
+        .catch(err =>
+        {
+          console.log(err)
+        })
   }
   nextQuestion(req, res) {
     req.query.include = [{ model: req.models.answer }]
