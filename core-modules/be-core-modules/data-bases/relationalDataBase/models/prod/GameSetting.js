@@ -9,6 +9,10 @@ module.exports = function (sequelize, DataTypes) {
     money: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    influence: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   },
     {
