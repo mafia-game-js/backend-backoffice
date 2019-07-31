@@ -49,7 +49,7 @@ class GameSetting {
     var settings = req.body.settings
       ? jwt.decode(req.body.settings, process.env.SECRET_KEY)
       : {
-          happiness: 35,
+          influence: 35,
           money: 25,
           time: 0,
           current_stage: 0,
@@ -64,12 +64,12 @@ class GameSetting {
       })
       .then(answer => {
         if (
-          settings.happiness <= 55 ||
-          settings.happiness >= 0 ||
-          (settings.happiness < 0 && answer > 0) ||
-          (settings.happiness > 55 && answer < 0)
+          settings.influence <= 55 ||
+          settings.influence >= 0 ||
+          (settings.influence < 0 && answer > 0) ||
+          (settings.influence > 55 && answer < 0)
         ) {
-          settings.happiness += answer.happiness
+          settings.influence += answer.influence
         }
         settings.money += answer.money
         settings.time += answer.time

@@ -43,9 +43,9 @@ class Settings {
     if (req.body.money < 1 && req.body.time > 0) {
       req.query.where.range = 5
       req.query.where.name = 'MONEY'
-    } else if (req.body.happiness < 1) {
+    } else if (req.body.influence < 1) {
       req.query.where.range = 5
-      req.query.where.name = 'HAPPINESS'
+      req.query.where.name = 'INFLUENCE'
     }
     next()
   }
