@@ -109,8 +109,6 @@ class Question {
         ]
       })
       .then(questions => {
-        //console.log('My questions are: ')
-        //console.log(questions)
         res.json(questions)
         })
         .catch(err =>

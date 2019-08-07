@@ -4,7 +4,7 @@
   "description": "This is going to be the service to retrieve data from all the different sources we are going to have.",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon node server.js",
+    "dev": "npm run prestart && nodemon node server.js",
     "postinstall": "link-module-alias",
     "prestart": "link-module-alias",
     "start": "pm2 start ecosystem.config.js",
