@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   var modelName = 'answer'
 
   const Answer = sequelize.define(modelName, {
-    response: {
+    label: {
       type: DataTypes.STRING,
       allowNull: false
     },

@@ -63,9 +63,9 @@
   },
   "_moduleAliases": {
     "#core": "core-modules",
-    "#backCtrl": "backend/controllers",
+    "#backCtrl": "backoffice/controllers",
     "#productCtrl": "product/controllers",
-    "#backRoutes": "backend/routes",
+    "#backRoutes": "backoffice/routes",
     "#productRoutes": "product/routes",
     "#helpers": "helpers"
   }

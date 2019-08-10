@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    decision: {
+    description: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -32,7 +32,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     isRelated: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     }
   })
 
