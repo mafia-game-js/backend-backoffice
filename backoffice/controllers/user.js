@@ -1,6 +1,6 @@
 var _ = require('underscore')
 var jwt = require('jsonwebtoken')
-var bcrypt = require('../helpers/bcrypt')
+var bcrypt = require('#helpers/bcrypt')
 
 class User {
   login(req, res) {

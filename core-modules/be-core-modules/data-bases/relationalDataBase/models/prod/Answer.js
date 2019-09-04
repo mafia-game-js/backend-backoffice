@@ -6,14 +6,17 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    question_related: {
+    questionId: {
+      type: DataTypes.INTEGER
+    },
+    questionRelated: {
       type: DataTypes.INTEGER
     },
     time: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    happiness: {
+    influence: {
       type: DataTypes.INTEGER,
       allowNull: false
     },

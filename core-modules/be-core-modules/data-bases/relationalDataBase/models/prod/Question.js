@@ -10,7 +10,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    department: {
+    hierarchy: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    organization: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -25,6 +29,10 @@ module.exports = function(sequelize, DataTypes) {
     level: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    isRelated: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   })
 

@@ -1,4 +1,4 @@
-const images = require('../helpers/images.js')
+const images = require('#helpers/images.js')
 
 class Files {
   uploadPhoto (req, res) {
@@ -6,7 +6,7 @@ class Files {
     var idName = req.user.id
     var imageFileResizeHeight = 200
     images.upPhoto(req, idName, type, imageFileResizeHeight).then(function (data) {
-      res.json({status: data})
+      res.json({ status: data })
     })
   }
 }

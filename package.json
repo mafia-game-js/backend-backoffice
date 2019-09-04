@@ -4,11 +4,12 @@
   "description": "This is going to be the service to retrieve data from all the different sources we are going to have.",
   "main": "server.js",
   "scripts": {
+    "dev": "npm run prestart && nodemon node server.js",
     "postinstall": "link-module-alias",
     "prestart": "link-module-alias",
     "start": "pm2 start ecosystem.config.js",
     "poststart": "pm2 logs",
-    "precommit": "npm run lint:js && npm run test",
+    "precommit": "npm run lint:js",
     "lint:js": "eslint --ignore-path .gitignore \"**/*.js\" --fix",
     "test": "NODE_PATH=./ NODE_ENV=test jest --runInBand --collectCoverage --detectOpenHandles --notify --forceExit",
     "sequelize:migrate": "node -r dotenv/config ./config/prod-migration.js",
@@ -52,6 +53,7 @@
     "link-module-alias": "^1.2.0",
     "morgan": "^1.9.1",
     "mysql2": "^1.6.5",
+    "nodemon": "^1.19.1",
     "pg": "^7.11.0",
     "pg-hstore": "^2.3.3",
     "pm2": "^3.5.1",
@@ -61,8 +63,10 @@
   },
   "_moduleAliases": {
     "#core": "core-modules",
-    "#ctrl": "controllers",
-    "#routes": "routes",
+    "#backCtrl": "backoffice/controllers",
+    "#productCtrl": "product/controllers",
+    "#backRoutes": "backoffice/routes",
+    "#productRoutes": "product/routes",
     "#helpers": "helpers"
   }
 }
