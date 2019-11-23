@@ -81,23 +81,21 @@ class Question {
       })
   }
   async delete(req, res) {
-    await req.models.answer.destroy({
-      where: {
-        questionId: req.body.id
-      }
-    })
-    req.models.question
-      .destroy({
+    try {
+      await req.models.answer.destroy({
+        where: {
+          questionId: req.body.id
+        }
+      })
+      await req.models.question.destroy({
         where: {
           id: req.body.id
         }
       })
-      .then(() => {
-        res.sendStatus(200)
-      })
-      .catch(err => {
-        res.sendStatus(400)
-      })
+      res.sendStatus(200)
+    } catch (err) {
+      res.sendStatus(400)
+    }
   }
   list(req, res) {
     req.models.question
