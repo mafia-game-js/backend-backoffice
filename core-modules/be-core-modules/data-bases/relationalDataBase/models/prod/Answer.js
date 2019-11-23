@@ -26,11 +26,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   })
 
-  Answer.associate = function(models) {
-    var Answer = models[modelName]
-    var Question = models.question
-    Answer.belongsTo(Question)
-  }
-
   return Answer
 }

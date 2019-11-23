@@ -80,7 +80,12 @@ class Question {
         res.responseStatus(400)
       })
   }
-  delete(req, res) {
+  async delete(req, res) {
+    await req.models.answer.destroy({
+      where: {
+        questionId: req.body.id
+      }
+    })
     req.models.question
       .destroy({
         where: {
@@ -90,7 +95,7 @@ class Question {
       .then(() => {
         res.sendStatus(200)
       })
-      .catch(() => {
+      .catch(err => {
         res.sendStatus(400)
       })
   }
@@ -110,11 +115,10 @@ class Question {
       })
       .then(questions => {
         res.json(questions)
-        })
-        .catch(err =>
-        {
-          console.log(err)
-        })
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
   nextQuestion(req, res) {
     req.query.include = [{ model: req.models.answer }]
