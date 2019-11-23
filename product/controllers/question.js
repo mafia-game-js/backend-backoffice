@@ -24,7 +24,6 @@ class Question {
     req.query.where = { id: { [Op.notIn]: req.body.questionViewed } }
 
     req.models.question.findAll(req.query).then(questions => {
-      console.log(questions)
       let index = Math.floor(Math.random() * questions.length)
 
       res.json({
