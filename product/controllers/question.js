@@ -1,5 +1,3 @@
-const Sequelize = require('sequelize')
-const Op = Sequelize.Op
 class Question {
   list(req, res) {
     req.models.question
@@ -20,6 +18,7 @@ class Question {
   }
 
   nextQuestion(req, res) {
+    const Op = req.Sequelize.Op
     req.query.include = [{ model: req.models.answer }]
     req.query.where = { id: { [Op.notIn]: req.body.questionViewed } }
 
