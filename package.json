@@ -27,7 +27,7 @@
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^5.0.0",
     "husky": "2.4.1",
-    "jest": "^23.6.0",
+    "jest": "^29.3.1",
     "prettier": "1.18.2"
   },
   "husky": {
